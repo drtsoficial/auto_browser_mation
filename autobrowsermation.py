@@ -1,12 +1,12 @@
 from selenium import webdriver
-
+from webdriver_manager.firefox import GeckoDriverManager
 # For using sleep function in python
 import time
 
 from selenium.webdriver.common.keys import Keys
 
 # Create a new instance of the webdriver
-browser = webdriver.Chrome()
+browser = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 browser.get('https://www.twitter.com/')
 
 # Let's the user see and also load the element
